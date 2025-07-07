@@ -1,0 +1,26 @@
+<style>
+  @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  .animated-bg {
+    background: linear-gradient(120deg, #a1c4fd, #c2e9fb, #fbc2eb, #a6c1ee);
+    background-size: 300% 300%;
+    animation: gradientBG 8s ease-in-out infinite;
+  }
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 1.2s ease-out forwards;
+  }
+  @keyframes fadeIn {
+    to { opacity: 1; }
+  }
+</style>
+<div class="min-h-screen w-full flex items-center justify-center animated-bg overflow-x-hidden">
+  <div class="fade-in bg-white/60 backdrop-blur-lg rounded-3xl shadow-2xl px-8 py-14 w-full max-w-2xl text-center flex flex-col items-center transition-transform duration-300 hover:scale-105 hover:shadow-3xl">
+    <h1 class="text-9x1 font-extrabold text-blue-800 mb-6 leading-tight drop-shadow-lg tracking-tight">Bem-vindo ao <span class="text-blue-900">FastSubscription</span></h1>
+    <p class="mb-12 text-gray-700 text-xl font-medium max-w-xl mx-auto">Faça login para acessar seu painel e gerenciar suas assinaturas.</p>
+    <%= link_to 'Entrar', new_user_session_path, class: 'inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-xl font-bold shadow-lg transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400 mt-4' %>
+  </div>
+</div>
