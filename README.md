@@ -80,4 +80,4 @@ FastSubscription is an MVP SaaS (Software as a Service) platform for subscriptio
 
 ---
 
-Developed by Fabiano Oliveira, Ruby Engineer.
+Developed by Fabiano Oliveira, Software Engineer.
